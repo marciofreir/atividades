@@ -6,22 +6,17 @@ public class Viagem {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
 
-        int Adulto = 19;
-        int Crianca = 18;
-        int Bebe = 3;
-
         System.out.print("qual sua idade? ");
         int idade = entrada.nextInt();
 
-        if (idade >= Adulto){
-            System.out.println("ingresso vai ser 50 conto");
+        if (idade > 18){
+            System.out.println("ingresso 50 reais");
+        }else if (idade >=3 && idade <=18){
+            System.out.println("ingresso 25 reais");
+        }else{
+            System.out.println("ingresso de graca");
         }
-        if(idade <= Crianca){
-            System.out.println("ingresso vai ser 25 conto");
-        }
-        if (idade <= Bebe){
-            System.out.println("ingresso vai ser de graca");
-        }
+
         entrada.close();
     }
 }
